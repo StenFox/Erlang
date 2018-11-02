@@ -23,5 +23,4 @@ display()->
   display().
 
 main() ->
-  Pid = spawn(fun()->display()end),
-  spawner(10000,1000,0,Pid).
+  spawner(10000,1000,0,spawn(fun()->display()end)).
